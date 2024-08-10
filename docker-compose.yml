@@ -1,0 +1,17 @@
+
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - ${HTTP_PORT:-8002}:${HTTP_PORT:-8002}
+    volumes:
+    - ./app:/app
+    healthcheck:
+      test: "curl -f http://localhost:${HTTP_PORT:-8002}/api || exit 1"
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    env_file:
+      - .env
