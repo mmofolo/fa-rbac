@@ -7,7 +7,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from routers import admin, user, general
 from config import settings
-from auth.tokan_util import secure_headers
+from auth.token_util import secure_headers
 
 app = FastAPI()
 app.include_router(admin.router)

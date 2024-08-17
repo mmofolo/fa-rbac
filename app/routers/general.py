@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from auth.tokan_util import valid_access_token
+from auth.token_util import valid_access_token
 
 router = APIRouter(
     prefix="/api",

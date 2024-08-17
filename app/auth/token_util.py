@@ -29,6 +29,8 @@ oauth_2_scheme = OAuth2AuthorizationCodeBearer(
     authorizationUrl=f"{auth_issuer}/protocol/openid-connect/auth",
     refreshUrl=f"{auth_issuer}/protocol/openid-connect/token",
 )
+
+
 url = f"{auth_issuer}/protocol/openid-connect/certs"
 jwks_client = PyJWKClient(url)
 

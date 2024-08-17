@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from auth.tokan_util import has_any_role, has_role
+from auth.token_util import has_any_role, has_role
 
 router = APIRouter(
     prefix="/api/user",
