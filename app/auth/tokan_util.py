@@ -16,7 +16,7 @@ cache_value = secure.CacheControl().no_cache().no_store().max_age(0).must_revali
 x_frame_options = secure.XFrameOptions().deny()
 
 secure_headers = secure.Secure(
-    csp=csp,
+    # csp=csp,
     hsts=hsts,
     referrer=referrer,
     cache=cache_value,
