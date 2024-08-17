@@ -23,7 +23,7 @@ async def set_secure_headers(request, call_next):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.client_origin_url],
-    allow_methods=["GET"],
+    allow_methods=["*"],
     allow_headers=["*"],
     max_age=86400,
 )

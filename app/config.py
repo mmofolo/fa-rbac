@@ -22,4 +22,4 @@ class Settings(BaseSettings):
 
 # print(os.environ.items())
 settings = Settings()
-print(Settings().dict())
+# print(Settings().dict())
